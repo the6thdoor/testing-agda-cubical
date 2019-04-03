@@ -6,7 +6,7 @@ open import Cubical.Data.Nat
 open import Cubical.Relation.Nullary
 open import Cubical.Data.Empty
 
--- Some useful helper types
+-- Some nice looking helper types
 
 Associative : {A : Set} (f : A → A → A) → Set
 Associative f = ∀ x y z → f x (f y z) ≡ f (f x y) z
@@ -54,7 +54,7 @@ monoid-ℕ = record { assoc = +-assoc ; e = 0 ; left-id = λ x → refl ; right-
 
 -- The below would be read as the following in traditional set theory:
 -- Prop: Let + be the unique binary operation on ⊘. Then (⊘, +) is not a group.
--- Suppose to the contrary that ⊘ is a group. If ⊘ is a group, then there exists e ∈ ⊘ such that for all x ∈ ⊘, e + x = x + e = x.
+-- Suppose to the contrary that ⊘ is a group. Then there exists e ∈ ⊘ such that for all x ∈ ⊘, e + x = x + e = x.
 -- Then ⊘ is non-empty, a contradiction.
 -- Therefore, ⊘ is not a group. ∎
 ⊘-not-group : ∀ {_+_} → ¬ Group ⊥ _+_
